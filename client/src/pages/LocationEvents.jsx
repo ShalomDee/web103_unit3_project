@@ -1,16 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import Event from '../components/Event'
+import EventsAPI from '../services/EventsAPI'
+import LocationsAPI from '../services/LocationsAPI'
 import '../css/LocationEvents.css'
 
-const LocationEvents = ({index}) => {
-    const [location, setLocation] = useState([])
+const LocationEvents = ({ index }) => {
+    const [location, setLocation] = useState({})
     const [events, setEvents] = useState([])
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const locationsData = await LocationsAPI.getAllLocations()
+                const loc = locationsData[index - 1]
+                setLocation(loc)
+                const eventsData = await EventsAPI.getEventsByLocation(loc.id)
+                setEvents(eventsData)
+            } catch (error) {
+                console.error(error)
+            }
+        })()
+    }, [index])
 
     return (
         <div className='location-events'>
             <header>
                 <div className='location-image'>
-                    <img src={location.image} />
+                    <img src={location.image} alt={location.name} />
                 </div>
 
                 <div className='location-info'>
@@ -21,7 +37,7 @@ const LocationEvents = ({index}) => {
 
             <main>
                 {
-                    events && events.length > 0 ? events.map((event, index) =>
+                    events && events.length > 0 ? events.map((event) =>
                         <Event
                             key={event.id}
                             id={event.id}
