@@ -1,6 +1,6 @@
 # WEB103 Project 3 - *UnityGrid Plaza*
 
-Submitted by: **Shalom**
+Submitted by: **Shalom Donga**
 
 About this web app: **UnityGrid Plaza is a virtual anime community space where users can explore upcoming events across four themed venues in Dallas, TX. Click on a location on the interactive map to see all events happening there — from cosplay showcases and mecha build contests to Dragon Ball tournaments and Sailor Moon proms.**
 
@@ -9,8 +9,6 @@ Time spent: **10** hours
 ## Required Features
 
 The following **required** functionality is completed:
-
-<!-- Make sure to check off completed functionality below -->
 
 - [x] **The web app uses React to display data from the API**
 - [x] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
@@ -25,7 +23,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [x] An additional page shows all possible events
-  - [x] Users can sort *or* filter events by location.
+  - [ ] Users can sort *or* filter events by location.
 - [ ] Events display a countdown showing the time remaining before that event
   - [ ] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
 
@@ -40,14 +38,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./week3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ScreenToGif
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with LiceCap
 
 ## Notes
 
@@ -55,7 +48,7 @@ The main challenge was wiring the interactive SVG map to the React router — th
 
 ## License
 
-Copyright 2026 Shalom
+Copyright 2026 Shalom Donga
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
